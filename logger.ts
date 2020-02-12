@@ -22,7 +22,7 @@ export interface EnabledLoggers {
 }
 
 export const constructLogMessage = (loggerName: string, input: string): string => {
-  const currentTime = new Date().toString();
+  const currentTime = new Date(Date.now()).toISOString();
   return `| ${loggerName} | ${currentTime} |: ${input}\n\n`;
 };
 
